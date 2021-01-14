@@ -11,5 +11,5 @@ ve-admin基于vue和element，如果你要使用ve-admin，请注意以下几项
 3.最后的忠告：市面上框架多如牛毛，请选择合适的框架。
 
 ## 写在最后
-作者的个人博客站[https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)  欢迎讨论，共享知识，共同进步。
+作者的个人博客站[http://victor-deng.com](http://victor-deng.com)  欢迎讨论，共享知识，共同进步。
 
