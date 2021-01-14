@@ -7,8 +7,10 @@ import "element-ui/lib/theme-chalk/index.css";
 import ElementUI from "element-ui";
 // 引入自定义样式
 import "@/assets/ve-admin/ve-admin.scss";
+// 引入全局js
+import base from './base.js';
 
-
+Vue.use(base);
 Vue.use(ElementUI);
 Vue.config.productionTip = false
 

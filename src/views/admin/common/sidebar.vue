@@ -39,7 +39,43 @@
 <script>
 export default {
 	data() {
-		return {};
+		return {
+			sideBarData: [
+				{
+					content: "图片管理",
+					url: "../#/admin/image_management/image_list",
+					icon: "picture-outline",
+					open_in_tab: true,
+					children: null
+				},
+				{
+					content: "用户管理",
+					url: "",
+					icon: "s-custom",
+					children: [
+						{
+							content: "用户列表",
+							url: "../#/admin/user_management/user_list",
+							icon: "user-solid",
+							open_in_tab: true
+						},
+						{
+							content: "黑名单",
+							url: "../#/admin/user_management/blacklist",
+							icon: "s-management",
+							open_in_tab: true
+						}
+					]
+				},
+				{
+					content: "系统管理",
+					url: "../#/admin/system_management/system_settings",
+					icon: "s-tools",
+					open_in_tab: true,
+					children: null
+				}
+			]
+		};
 	},
 	//定义方法
 	methods: {
@@ -52,13 +88,6 @@ export default {
 		clickSidebarMenu(title, url, open_tab) {
 			//console.log(title, url);
 			this.$parent.openTab(title, url, open_tab);
-		}
-	},
-	//获取父组件传递过来的值
-	props: {
-		sideBarData: {
-			type: Array,
-			required: true
 		}
 	}
 };

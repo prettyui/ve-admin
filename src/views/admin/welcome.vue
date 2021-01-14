@@ -1,7 +1,9 @@
 <template>
 	<div style="padding-left:20px">
 		<h1>监控面板</h1>
-		<p>你好，欢迎使用ve-admin <span>v1.0</span></p>
+		<p>
+			你好，欢迎使用ve-admin <span>{{ this.Version() }}</span>
+		</p>
 		<p>上次登录IP：14.218.128.106 上次登录时间：2021-01-11 09:16:23</p>
 		<el-row>
 			<el-col :span="12">

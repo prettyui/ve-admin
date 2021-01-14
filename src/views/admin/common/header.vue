@@ -1,7 +1,7 @@
 <template>
 	<div class="vea-header-bar-container">
 		<a class="vea-header-bar-logo" href="/aboutHui.shtml">ve-admin</a>
-		<span class="vea-header-bar-version">v1.0</span>
+		<span class="vea-header-bar-version">{{ this.Version() }}</span>
 		<div class="vea-header-bar-version">
 			<date-time></date-time>
 		</div>
@@ -33,21 +33,30 @@
 
 <script>
 import DateTime from "../dateTime.vue";
+
 export default {
 	components: { DateTime },
 	data() {
-		return {};
+		return {
+			headerData: [
+				{
+					content: "小明",
+					url: "../#/admin/user_management/user_info",
+					icon: "user-solid",
+					open_in_tab: false
+				},
+				{
+					content: "操作日志",
+					url: "../#/admin/user_management/user_log",
+					icon: "thumb",
+					open_in_tab: true
+				}
+			]
+		};
 	},
 	methods: {
 		openInTab(title, url, open_tab) {
 			this.$parent.openTab(title, url, open_tab);
-		}
-	},
-	//获取父组件传递过来的值
-	props: {
-		headerData: {
-			type: Array,
-			required: true
 		}
 	}
 };
