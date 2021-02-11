@@ -1,182 +1,118 @@
-.vea-header-bar {
+/**
+* 基础样式
+*/
+body {
+	margin: 0;
+	padding: 0;
+}
+
+/**
+* 头部样式
+*/
+.veadmin-header {
 	background-color: #222;
 	height: 45px;
 	position: fixed;
 	top: 0;
-	left: 0;
 	right: 0;
-	z-index: 99;
+	width: 100%;
 }
-.vea-header-bar-container {
-	padding-right: 15px;
-	padding-left: 15px;
-	margin-right: auto;
-	margin-left: auto;
-}
-.vea-header-bar-logo {
+
+.veadmin-header-container {
+	margin: 0px 10px;
 	height: 44px;
 	line-height: 44px;
-	margin-right: 10px;
+}
+
+.veadmin-header-logo {
 	color: #fff;
-	font-size: smaller;
-	display: inline-block;
 	text-decoration: none;
 	cursor: pointer;
-	background-repeat: no-repeat;
-	background-position: left center;
-	background-size: auto 100%;
 }
-.vea-header-bar-version {
-	height: 44px;
-	line-height: 44px;
-	margin-right: 10px;
+
+.veadmin-header-version {
 	color: #fff;
 	font-size: xx-small;
-	cursor: default;
-	display: inline-block;
-	text-decoration: none;
-	background-repeat: no-repeat;
-	background-position: left center;
-	background-size: auto 100%;
+	margin-left: 4px;
 }
-.vea-header-bar-right-menu {
+
+.veadmin-header-datetime {
+	display: inline-block;
+}
+
+.veadmin-header-menu {
 	right: 20px;
 	position: absolute;
 	top: 0;
-	z-index: 1;
-	display: block;
-	margin: 0;
-	padding: 0;
 }
-.vea-header-bar-right-menu ul {
-	font-size: 0;
-	line-height: 0;
-	zoom: 1;
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	display: block;
-	margin-block-start: 1em;
-	margin-block-end: 1em;
-	margin-inline-start: 0px;
-	margin-inline-end: 0px;
-	padding-inline-start: 40px;
-	color: #fff;
+.veadmin-header-menu ul {
+	margin: 0 auto;
 }
-.vea-header-bar-right-menu li {
+.veadmin-header-menu li {
 	color: #fff;
-	line-height: 44px;
-	font-size: 14px;
 	display: inline-block;
-	text-align: center;
-	position: relative;
-	margin: 0;
-	padding: 0;
-	word-wrap: break-word;
-}
-.vea-header-bar-right-menu i {
-	padding-right: 2px;
-}
-.vea-header-bar-right-menu a {
 	padding: 0 10px;
-	color: #fff;
-	line-height: 44px;
-	font-size: 14px;
-	display: inline-block;
-	text-align: center;
-	text-decoration: none;
-	cursor: pointer;
-	outline: 0;
-	word-wrap: break-word;
 }
-.vea-header-bar-right-menu a:hover {
+.veadmin-header-menu li:first-child {
+	padding: 0px 0px;
+}
+.veadmin-header-menu li:hover {
 	background-color: rgba(255, 255, 255, 0.2);
-	text-decoration: none;
-	-webkit-transition: background-color 0.3s ease 0s;
-	-moz-transition: background-color 0.3s ease 0s;
-	-o-transition: background-color 0.3s ease 0s;
-	-ms-transition: background-color 0.3s ease 0s;
-	transition: background-color 0.3s ease 0s;
+	cursor: pointer;
 }
+.veadmin-header-menu span {
+	margin-left: 2px;
+	font-size: medium;
+}
+/**
+* 头部样式end
+*/
 
-.vea-side-bar {
-	//transition: all 0.2s ease 0s;
+/**
+* 侧边栏样式 
+*/
+.veadmin-sidebar {
 	position: absolute;
 	top: 45px;
 	bottom: 0;
 	left: 0;
-	padding-top: 10px;
 	width: 200px;
-	z-index: 99;
 	overflow-x: hidden;
 	overflow-y: auto;
 	background-color: #e3e9f1;
-	//border-right: 1px solid #e3e9f1;
-	display: block;
-	margin: 0;
-	padding: 0;
-}
-.vea-side-bar-container {
-	word-wrap: break-word;
-	display: block;
 }
 
-.vea-content-box {
-	transition: all 0.2s ease 0s;
+/**
+* 主要内容样式
+*/
+.veadmin-content {
 	position: absolute;
-	top: 44px;
+	top: 45px;
 	right: 0;
 	bottom: 0;
-	left: 199px;
-	overflow: hidden;
-	z-index: 1;
-	background-color: #fff;
-	display: block;
-	margin: 0;
-	padding: 0;
-	word-wrap: break-word;
+	left: 200px;
+	transition: all 0.2s ease 0s;
 }
-
-.vea-content-header-bar {
-	height: 35px;
-	padding-right: 75px;
-	overflow: hidden;
-	position: relative;
+.veadmin-content-header {
+	padding-right: 107px;
 	background-color: #efeef0;
-	background-repeat: repeat-x;
 	background-position: 0 -177px;
-	word-wrap: break-word;
-	display: block;
 }
-.vea-content-header-bar-tab {
+.veadmin-content-tab {
 	position: relative;
 	height: 35px;
 	overflow: hidden;
-	word-wrap: break-word;
-	display: block;
 }
 
-.vea-content-header-bar-tab ul {
+.veadmin-content-tab ul {
 	position: absolute;
-	height: 26px;
-	line-height: 26px;
-	background: none;
+	height: 25px;
+	line-height: 25px;
 	top: 7px;
-	left: 0;
-	padding-top: 0;
-	zoom: 1;
-	list-style-type: none;
-	word-wrap: break-word;
-	display: block;
-	margin-block-start: 1em;
-	margin-block-end: 1em;
-	margin-inline-start: 0px;
-	margin-inline-end: 0px;
-	padding-inline-start: 40px;
 	margin: 0;
 	padding: 0;
 }
-.vea-content-header-bar-tab li {
+.veadmin-content-tab li {
 	height: 26px;
 	line-height: 26px;
 	position: relative;
@@ -186,97 +122,112 @@
 	padding: 0 30px;
 	white-space: nowrap;
 	color: #282828;
-	background-position: 0 0;
-	background-repeat: no-repeat;
-	margin: 0;
-	word-wrap: break-word;
-	text-align: -webkit-match-parent;
 }
 
-.vea-content-header-bar-tab li:hover {
+.veadmin-content-tab li:hover {
 	background-position: 0 -60px;
 }
-.vea-content-header-bar-tab li:hover em {
+.veadmin-content-tab li:hover em {
 	background-position: right -90px;
 }
 
-.vea-content-header-bar-tab li.active {
+.veadmin-content-tab li.active {
 	background-position: 0 -120px;
 	z-index: 99;
 }
-.vea-content-header-bar-tab li.active em {
+.veadmin-content-tab li.active em {
 	background-position: right -150px;
 }
-.vea-content-header-bar-tab i {
+.veadmin-content-tab i {
 	position: absolute;
-	display: block;
 	width: 13px;
 	height: 13px;
 	top: 50%;
 	margin-top: -6px;
 	right: 5px;
-	font-size: 0;
-	line-height: 0;
 	cursor: pointer;
-	background-repeat: no-repeat;
-	background-position: 0 0;
-	word-wrap: break-word;
-	font-style: italic;
 }
-.vea-content-header-bar-tab i:hover {
+.veadmin-content-tab i:hover {
 	background-position: 0 bottom;
 }
-.vea-content-header-bar-tab em {
+.veadmin-content-tab em {
 	right: -16px;
 	height: 26px;
 	width: 16px;
 	position: absolute;
-	top: 0;
-	z-index: 50;
 	background-position: right -30px;
-	background-repeat: no-repeat;
-	font-style: italic;
-	font-weight: 400;
-	word-wrap: break-word;
 }
 
-.vea-content-header-bar-button {
+.veadmin-content-button-close-all {
 	display: none;
 	position: absolute;
 	right: 4px;
 	top: 3px;
-	word-wrap: break-word;
-}
-.vea-content-close-button {
 	color: #2d2d2d;
 	background-color: #ffc56f;
 	border-color: #c1995e;
 }
 
-.vea-content-iframe-box {
+.veadmin-content-iframe-box {
 	position: absolute;
 	top: 34px;
 	bottom: 0;
 	left: 0;
 	right: 0;
-	overflow: auto;
-	z-index: 1;
-	word-wrap: break-word;
-	display: block;
-}
-.vea-content-iframe {
-	display: block;
-	position: absolute;
-	top: 0;
-	right: 0;
-	left: 0;
-	bottom: 0;
-	word-wrap: break-word;
 }
 
-.vea-content-iframe iframe {
+.veadmin-content-iframe-box iframe {
 	position: absolute;
 	bottom: 0;
 	height: 100%;
 	width: 100%;
 }
+
+/**
+* 主要内容样式end
+*/
+
+/**
+* iframe标签内部样式
+*/
+.veadmin-iframe-header {
+	background-color: #edeeee;
+	padding: 0px 20px;
+	position: relative;
+	z-index: 99;
+	line-height: 35px;
+	height: 35px;
+	overflow: hidden;
+	font-size: small;
+}
+
+.veadmin-iframe-button {
+	padding: 6px;
+	margin-left: 2px;
+	cursor: pointer;
+	border-width: 0px;
+	border-radius: 4px;
+	background-color: rgba(221, 221, 221, 1);
+	border-color: rgba(221, 221, 221, 1);
+}
+.veadmin-iframe-button:hover {
+	background-color: rgba(221, 221, 221, 0.8);
+}
+
+.veadmin-iframe-content {
+	margin: 0;
+	width: 100%;
+}
+
+.veadmin-iframe-header-custom-fixed {
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+.veadmin-iframe-content-custom-fixed {
+	position: absolute;
+	top: 36px;
+}
+/**
+* 主要内容样式end
+*/

@@ -5,15 +5,16 @@ ve-admin framework based on Vue and element.
 ve-admin framework based on Vue and element. If you want to use ve-admin,you need to have the foundation of Vue and element,and you need to translate Chinese. We only provide Chinese documents for ve-admin, and we only provide maintenance in Chinese. Because the author needs to protect the earth, capture aliens, help the elderly cross the road and so on, so the project maintenance go with the fate and mood.
 
 ## 介绍
-ve-admin基于vue和element，如果你要使用ve-admin，请注意以下几项：
-1.  你需要有vue和element的基础。
+ve-admin基于vue和element-ui，如果你要使用ve-admin，请注意以下几项：
+1.  你需要有vue和element-ui的基础。
 2.  由于作者需要保护地球，抓捕外星人，扶老奶奶过马路等原因，因此，随缘随心维护项目。
 3.  最后的忠告：市面上框架多如牛毛，请选择合适的框架。
 
 #### 使用说明
 1.  下载源码
 2.  使用编辑器打开项目
-3.  执行命令补全依赖：npm install
+3.  使用命令安装element-ui：cnpm i element-ui -S
+4.  执行命令补全依赖：npm install
 详细教程：以后再放链接在这
 
 ## 写在最后
