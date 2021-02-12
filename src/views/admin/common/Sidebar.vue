@@ -60,8 +60,8 @@ export default {
 					]
 				},
 				{
-					label: "系统管理",
-					url: "../#/admin/system_management/system_settings",
+					label: "系统设置",
+					url: "/admin/system_settings",
 					icon: "el-icon-s-tools",
 					open_tab: true,
 					children: null

@@ -10,7 +10,7 @@
 			</button>
 		</div>
 		<div class="veadmin-iframe-content veadmin-iframe-content-custom-fixed">
-			<el-row>
+			<el-row style="text-align: center;">
 				<el-button class="search-range" type="primary" icon="el-icon-circle-plus-outline" @click="addArticle()" plain>增加文章</el-button>
 				<el-input class="search-range" style="width:150px" v-model="condition.title" placeholder="搜索标题"></el-input>
 				<el-input class="search-range" style="width:150px" v-model="condition.text" placeholder="搜索内容"></el-input>
@@ -60,24 +60,13 @@
 								@keyup.enter="addTabInputConfirm(scope.$index)"
 								@blur="addTabInputConfirm(scope.$index)"
 							/>
-							<!-- <el-input
-								class="input-new-tag"
-								v-if="inputNewTab.visible"
-								v-model="inputNewTab.label"
-								ref="saveTagInput"
-								size="small"
-								@keyup.enter.native="addTabInputConfirm(scope.$index)"
-								@blur="addTabInputConfirm(scope.$index)"
-							>
-							</el-input> -->
-							<!-- <el-button v-else class="button-new-tag" size="small" @click="showAddTabInput">+ 增加标签</el-button> -->
 						</template>
 					</el-table-column>
 					<el-table-column prop="release_time" label="发布时间" width="210"> </el-table-column>
 					<el-table-column label="" width="200">
 						<template slot-scope="scope">
 							<!-- <el-button @click="handleArticle(scope.$index, scope.row)">打印数据</el-button> -->
-							<el-button type="primary" icon="el-icon-search" circle @click="viewDetail(scope.row.id)"></el-button>
+							<el-button type="primary" icon="el-icon-search" circle @click="showArticle(scope.row.id)"></el-button>
 							<el-button type="primary" icon="el-icon-edit" circle @click="editArticle(scope.row.id)"></el-button>
 							<el-button type="danger" icon="el-icon-delete" circle @click="deleteArticle(scope.row.id)"></el-button>
 						</template>
@@ -141,10 +130,6 @@ export default {
 						}
 					}
 				]
-			},
-			inputNewTab: {
-				visible: false,
-				label: ""
 			},
 			pagination: {
 				start: 0,
@@ -239,14 +224,7 @@ export default {
 			//然后再从静态页面删除tab
 			this.articleList[articleListIndex].tab_list.splice(this.articleList[articleListIndex].tab_list.indexOf(tag), 1);
 		},
-		/* 		showAddTabInput() {
-			this.inputNewTab.visible = true;
-			this.$nextTick((_) => {
-				this.$refs.saveTagInput.$refs.input.focus();
-			});
-		}, */
 		addTabInputConfirm(articleListIndex) {
-			//let label = this.inputNewTab.label;
 			let label = document.getElementById("input-" + articleListIndex).value;
 			//console.log(articleListIndex, label);
 			if (label) {
@@ -265,6 +243,21 @@ export default {
 			this.pagination.start = (page - 1) * this.pagination.limit;
 			//重新获取文章列表
 			//this.getArticleList();
+		},
+		searchArticle() {
+			console.log("search article condition:", this.condition);
+		},
+		addArticle() {
+			console.log("add article");
+		},
+		showArticle(id) {
+			console.log("article_id:", id);
+		},
+		editArticle(id) {
+			console.log("article_id:", id);
+		},
+		deleteArticle(id) {
+			console.log("article_id:", id);
 		}
 	}
 };
@@ -272,17 +265,8 @@ export default {
 
 <style lang="scss" scoped>
 .search-range {
-	float: left;
 	margin-left: 10px;
 	margin-top: 10px;
-}
-.button-new-tag {
-	margin-left: 2px;
-	height: 32px;
-	/* line-height: 30px; */
-	padding-top: 0;
-	padding-bottom: 0;
-	border-radius: 4px;
 }
 .input-new-tag {
 	margin-left: 2px;

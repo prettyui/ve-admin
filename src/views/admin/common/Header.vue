@@ -9,11 +9,11 @@
 		<div class="veadmin-header-menu">
 			<ul>
 				<li><span style="padding-left:10px;">你好！</span></li>
-				<li v-for="(item, count) in headerData" :key="count.toString()" @click="openTab(item.content, item.url, item.open_tab)">
+				<li v-for="(item, count) in headerData" :key="count.toString()" @click="openTab(item.label, item.url, item.open_tab)">
 					<i :class="item.icon"></i>
 					<span>{{ item.label }}</span>
 				</li>
-				<li @click="openTab('信息中心', '../#/admin/message_management/message_list', true)">
+				<li @click="openTab('信息中心', '/admin/message_list', true)">
 					<i class="el-icon-message"></i>
 					<span>信息中心</span>
 				</li>
@@ -35,13 +35,13 @@ export default {
 			headerData: [
 				{
 					label: "小明",
-					url: "../admin/user_management/user_info",
+					url: "/admin/user_info",
 					icon: "el-icon-user-solid",
 					open_tab: false
 				},
 				{
 					label: "操作日志",
-					url: "../admin/user_management/user_log",
+					url: "/admin/operation_log",
 					icon: "el-icon-thumb",
 					open_tab: true
 				}

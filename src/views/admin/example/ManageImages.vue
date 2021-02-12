@@ -3,11 +3,6 @@
 		<div class="veadmin-iframe-header veadmin-iframe-header-custom-fixed">
 			<span>当前位置:</span>
 			图片管理
-			<!-- <span class="c-gray en">&gt;</span>
-			 style="padding-left:20px"
-			资讯管理
-			<span class="c-gray en">&gt;</span>
-			资讯列表 -->
 			<button class="veadmin-iframe-button" onclick="location.reload()">
 				<i class="el-icon-refresh-right"></i>
 			</button>
