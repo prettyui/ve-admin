@@ -2,16 +2,16 @@
 	<div>
 		<el-menu default-active="" @open="handleOpen" @close="handleClose" background-color="#e3e9f1" text-color="#000" active-text-color="#1e82e8">
 			<div v-for="(item, index) in sideBarData" :key="index">
-				<el-submenu v-if="item.children" :index="index + item.url">
+				<el-submenu v-if="item.children" :index="index + '-' + item.url">
 					<template slot="title">
 						<i :class="item.icon"></i>
 						<span slot="title">{{ item.label }}</span>
 					</template>
 					<el-menu-item-group>
 						<el-menu-item
-							:index="subItem.url"
 							v-for="(subItem, subIndex) in item.children"
 							:key="subIndex"
+							:index="index + '-' + subIndex + '-' + subItem.url"
 							@click.native="clickSidebarMenu(subItem.label, subItem.url, subItem.open_tab)"
 						>
 							<i :class="subItem.icon"></i>
@@ -19,7 +19,7 @@
 						</el-menu-item>
 					</el-menu-item-group>
 				</el-submenu>
-				<el-menu-item v-else :index="item.url" @click.native="clickSidebarMenu(item.label, item.url, item.open_tab)">
+				<el-menu-item v-else :index="index + '-' + item.url" @click.native="clickSidebarMenu(item.label, item.url, item.open_tab)">
 					<i :class="item.icon"></i>
 					<span slot="title">{{ item.label }}</span>
 				</el-menu-item>
